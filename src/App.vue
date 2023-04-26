@@ -10,7 +10,8 @@
     ref="scrollContainer">
      <Item
        v-for="(item, index) in items"
-       :key="index" />
+       :key="index"
+       :text="index + 1" />
   </div>
 </template>
 

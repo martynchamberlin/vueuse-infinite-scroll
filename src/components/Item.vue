@@ -1,6 +1,14 @@
 <template>
-  <div class="item"></div>
+  <div
+    class="item"
+    v-text="`#${text}`" />
 </template>
+
+<script lang="ts" setup>
+defineProps({
+  text: String
+});
+</script>
 
 <style>
 .item {
@@ -9,5 +17,10 @@
   border-radius: 4px;
   background: rgba(0, 0, 0, .1);
   margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  opacity: .2;
 }
 </style>
