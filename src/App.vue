@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import Item from './components/Item.vue';
 import { useInfiniteScroll } from '@vueuse/core';
 
@@ -34,9 +34,7 @@ function getMoreItems() {
   });
 }
 
-onMounted(() => {
-  useInfiniteScroll(scrollContainer.value, getMoreItems);
-});
+useInfiniteScroll(scrollContainer, getMoreItems);
 </script>
 
 
